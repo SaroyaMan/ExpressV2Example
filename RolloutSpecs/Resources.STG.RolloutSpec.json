@@ -3,6 +3,7 @@
   "contentVersion": "1.0.0.0",
   "rolloutMetadata": {
     "serviceModelPath": "ServiceModels\\Resources.STG.ServiceModel.json",
+    "scopeBindingsPath": "ScopeBindings\\General.ScopeBinding.json",
     "name": "ASx.Bootcamp.Resources.STG",
     "rolloutType": "Major",
     "buildSource": {

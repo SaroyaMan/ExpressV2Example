@@ -3,12 +3,12 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "location": {
-      "value": "East US 2"
+      "value": "__LOCATION__"
     },
     "storageAccounts": {
       "value": [
         {
-          "name": "asxsrebootcampeusstg",
+          "name": "__ASX_SRE_BOOTCAMP_STORAGE__",
           "tags": {
             "UsedFor": "ASxSREBootcamp"
           },
