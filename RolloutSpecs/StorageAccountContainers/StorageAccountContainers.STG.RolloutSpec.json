@@ -1,6 +1,5 @@
 {
-  "$schema": "http://schema.express.azure.com/schemas/2015-01-01-alpha/RolloutSpec.json",
-  "comment": "Generated from Resources.tt",
+  "$schema": "https://ev2schema.azure.net/schemas/2020-01-01/rolloutSpecification.json",
   "contentVersion": "1.0.0.0",
   "rolloutMetadata": {
     "serviceModelPath": "ServiceModels\\InE.Resources.STG.ServiceModel.json",
