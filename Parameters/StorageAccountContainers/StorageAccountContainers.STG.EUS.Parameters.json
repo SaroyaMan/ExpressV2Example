@@ -5,7 +5,7 @@
     "containers": {
       "value": [
         {
-          "storageAccountName": "__ASX_SRE_BOOTCAMP_STORAGE__",
+          "storageAccountName": "asxsrebootcampeusstg",
           "name": "some-container"
         }
       ]

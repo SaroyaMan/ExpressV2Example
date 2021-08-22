@@ -33,12 +33,7 @@
       "azureResourceGroupName": "asx-bootcamp-storages-stg",
       "location": "East US 2",
       "instanceOf": "ResourceGroupDefinition",
-      "azureSubscriptionId": "35f47de9-8444-4659-991b-d334adc87344",
-      "scopeTags": [
-        {
-            "name": "STG"
-        }
-      ],
+      "azureSubscriptionId": "ecaaecb5-5d9d-4eec-966e-003aa60c938b",
       "serviceResources": [
         {
           "name": "StorageAccount.STG.EUS",

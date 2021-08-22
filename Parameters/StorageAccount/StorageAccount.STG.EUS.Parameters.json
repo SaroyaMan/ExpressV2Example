@@ -8,7 +8,7 @@
     "storageAccounts": {
       "value": [
         {
-          "name": "__ASX_SRE_BOOTCAMP_STORAGE__",
+          "name": "asxsrebootcampeusstg",
           "tags": {
             "UsedFor": "ASxSREBootcamp"
           },
