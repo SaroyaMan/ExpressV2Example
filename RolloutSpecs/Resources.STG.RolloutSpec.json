@@ -2,9 +2,9 @@
   "$schema": "https://ev2schema.azure.net/schemas/2020-01-01/rolloutSpecification.json",
   "contentVersion": "1.0.0.0",
   "rolloutMetadata": {
-    "serviceModelPath": "ServiceModels\\InE.Resources.STG.ServiceModel.json",
+    "serviceModelPath": "ServiceModels\\Resources.STG.ServiceModel.json",
     "scopeBindingsPath": "ScopeBindings\\General.ScopeBindings.json",
-    "name": "InE.Resources.Azure",
+    "name": "ASx.Bootcamp.Resources.STG",
     "rolloutType": "Major",
     "buildSource": {
       "parameters": {
