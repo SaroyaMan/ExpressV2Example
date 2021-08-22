@@ -1,0 +1,29 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "type": "string"
+    },
+    "storageAccounts": {
+      "type": "array"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "condition": "[not(empty(parameters('storageAccounts')))]",
+      "name": "[parameters('storageAccounts')[copyIndex()].name]",
+      "apiVersion": "2019-06-01",
+      "location": "[parameters('location')]",
+      "tags": "[parameters('storageAccounts')[copyIndex()].tags]",
+      "sku": "[parameters('storageAccounts')[copyIndex()].sku]",
+      "kind": "[parameters('storageAccounts')[copyIndex()].kind]",
+      "properties": {
+        "networkAcls": "[parameters('storageAccounts')[copyIndex()].networkAcls]",
+        "accessTier": "[parameters('storageAccounts')[copyIndex()].accessTier]",
+        "minimumTlsVersion": "[parameters('storageAccounts')[copyIndex()].minimumTlsVersion]"
+      }
+    }
+  ]
+}

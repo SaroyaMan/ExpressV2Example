@@ -1,0 +1,56 @@
+{
+  "$schema": "https://ev2schema.azure.net/schemas/2020-01-01/serviceModel.json",
+  "contentVersion": "0.0.0.1",
+  "serviceMetadata": {
+    "serviceGroup": "InE.Resources",
+    "environment": "Test"
+  },
+  "serviceResourceGroupDefinitions": [
+    {
+      "name": "ResourceGroupDefinition",
+      "serviceResourceDefinitions": [
+        {
+          "name": "StorageAccounts.ResourceDefinition",
+          "composedOf": {
+            "arm": {
+              "templatePath": "Templates\\StorageAccounts.Template.json"
+            }
+          }
+        },
+        {
+          "name": "StorageAccountContainers.ResourceDefinition",
+          "composedOf": {
+            "arm": {
+              "templatePath": "Templates\\StorageAccountContainers.Template.json"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "serviceResourceGroups": [
+    {
+      "azureResourceGroupName": "wcd-ine-storages-stg",
+      "location": "East US 2",
+      "instanceOf": "ResourceGroupDefinition",
+      "azureSubscriptionId": "f0474004-b2ce-45a3-aae3-5f18fa302401",
+      "scopeTags": [
+        {
+            "name": "STG"
+        }
+      ],
+      "serviceResources": [
+        {
+          "name": "StorageAccount.STG.EUS",
+          "instanceOf": "StorageAccounts.ResourceDefinition",
+          "armParametersPath": "Parameters\\StorageAccount\\StorageAccount.STG.EUS.Parameters.json"
+        },
+        {
+          "name": "StorageAccountContainers.STG.EUS",
+          "instanceOf": "StorageAccountContainers.ResourceDefinition",
+          "armParametersPath": "Parameters\\StorageAccountContainers\\StorageAccountContainers.STG.EUS.Parameters.json"
+        }
+      ]
+    }
+  ]
+}

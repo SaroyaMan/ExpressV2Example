@@ -1,0 +1,36 @@
+{
+  "$schema": "https://ev2schema.azure.net/schemas/2020-01-01/rolloutSpecification.json",
+  "contentVersion": "1.0.0.0",
+  "rolloutMetadata": {
+    "serviceModelPath": "ServiceModels\\InE.Resources.STG.ServiceModel.json",
+    "scopeBindingsPath": "ScopeBindings\\General.ScopeBindings.json",
+    "name": "InE.Resources.Azure",
+    "rolloutType": "Major",
+    "buildSource": {
+      "parameters": {
+        "VersionFile": "buildver.txt"
+      }
+    }
+  },
+  "orchestratedSteps": [
+    {
+      "name": "Deploy_StorageAccount.STG.EUS",
+      "targetType": "ServiceResource",
+      "targetName": "StorageAccount.STG.EUS",
+      "actions": [
+        "Deploy"
+      ]
+    },
+    {
+      "name": "Deploy_StorageAccountContainers.STG.EUS",
+      "targetType": "ServiceResource",
+      "targetName": "StorageAccountContainers.STG.EUS",
+      "actions": [
+        "Deploy"
+      ],
+      "dependsOn": [
+        "Deploy_StorageAccount.STG.EUS"
+      ]
+    }
+  ]
+}

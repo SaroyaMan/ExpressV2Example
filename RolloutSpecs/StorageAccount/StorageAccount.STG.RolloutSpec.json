@@ -1,0 +1,25 @@
+{
+  "$schema": "http://schema.express.azure.com/schemas/2015-01-01-alpha/RolloutSpec.json",
+  "comment": "Generated from Resources.tt",
+  "contentVersion": "1.0.0.0",
+  "rolloutMetadata": {
+    "serviceModelPath": "ServiceModels\\InE.Resources.STG.ServiceModel.json",
+    "name": "InE.Resources.Azure",
+    "rolloutType": "Major",
+    "buildSource": {
+      "parameters": {
+        "VersionFile": "buildver.txt"
+      }
+    }
+  },
+  "orchestratedSteps": [
+    {
+      "name": "Deploy_StorageAccount.STG.EUS",
+      "targetType": "ServiceResource",
+      "targetName": "StorageAccount.STG.EUS",
+      "actions": [
+        "Deploy"
+      ]
+    }
+  ]
+}
