@@ -12,9 +12,6 @@
       "condition": "[not(empty(parameters('containers')))]",
       "name": "[if(not(empty(parameters('containers'))), concat(parameters('containers')[copyIndex()].storageAccountName, '/default/', parameters('containers')[copyIndex()].name), 'null/null/null')]",
       "apiVersion": "2018-07-01",
-      "dependsOn": [
-        "resourceId('Microsoft.Storage/storageAccounts', parameters('containers')[copyIndex()].storageAccountName))]"
-      ],
       "properties": {
         "publicAccess": "None"
       },

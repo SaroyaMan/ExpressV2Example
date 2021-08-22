@@ -23,6 +23,10 @@
         "networkAcls": "[parameters('storageAccounts')[copyIndex()].networkAcls]",
         "accessTier": "[parameters('storageAccounts')[copyIndex()].accessTier]",
         "minimumTlsVersion": "[parameters('storageAccounts')[copyIndex()].minimumTlsVersion]"
+      },
+      "copy": {
+        "name": "storageAccountsCopy",
+        "count": "[length(parameters('storageAccounts'))]"
       }
     }
   ]

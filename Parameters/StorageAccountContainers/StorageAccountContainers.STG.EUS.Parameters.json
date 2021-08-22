@@ -6,7 +6,7 @@
       "value": [
         {
           "storageAccountName": "__ASX_SRE_BOOTCAMP_STORAGE__",
-          "name": "some_container"
+          "name": "some-container"
         }
       ]
     }
